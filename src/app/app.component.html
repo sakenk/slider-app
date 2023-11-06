@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<div class="center" *ngIf="loading">
+    Идет загрузка..
+</div>
+<div *ngIf="!loading && images && images.length">
+    <app-carousel [images]="images" [autoSlide]="true"></app-carousel>
+</div>
+<div class="center" *ngIf="images?.length === 0">
+    Рисунки не найдены
+</div>
